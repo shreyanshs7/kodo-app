@@ -23,7 +23,8 @@
     kodo_project-kodo-app-service-1  | [2022-03-29 16:23:52 +0000] [12] [INFO] Booting worker with pid: 12
     ```
 
-* Once the server is running, before testing anything run the below command to load the mock data into database table
+* Once the server is running, before testing anything run the below command to load the mock data into database table.
+* Also, there would be duplicate data if you call this endpoint again as there are not checks or constraints on table.
 ```
 curl --location --request POST 'http://0.0.0.0:9000/load_mock_data'
 ```
