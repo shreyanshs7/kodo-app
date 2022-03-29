@@ -1,0 +1,11 @@
+version: '3.7'
+    
+services:
+  kodo-app-service:
+    build: .
+    restart: unless-stopped
+    entrypoint: bash run.sh
+    volumes:
+      - .:/kodo-app
+    ports:
+      - 9000:9000
